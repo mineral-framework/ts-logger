@@ -2,6 +2,8 @@
 
 A logger for the Mineral Framework
 
+[![Build Status](https://travis-ci.org/mineral-framework/ts-logger.svg?branch=master)](https://travis-ci.org/mineral-framework/ts-logger)
+
 ## Table of contents
 * [Usage](#usage)
 * [Configuration](#configuration)
