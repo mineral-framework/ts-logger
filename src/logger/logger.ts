@@ -36,7 +36,7 @@ class LoggerImpl implements Logger {
     public error(message: string, error?: Error, meta: object = {}) {
         this.logger.error(message, {
             error,
-            meta
+            meta,
         })
     }
 
