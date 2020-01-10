@@ -11,6 +11,6 @@ export interface FileTransport extends TransportOptions {
 export const createFileTransport = (transport: FileTransport, clazz: string): FileTransportInstance => {
     return new transports.File({
         filename: transport.filename,
-        level: transport.level
+        level: transport.level,
     })
 }

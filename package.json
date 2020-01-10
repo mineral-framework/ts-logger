@@ -4,6 +4,7 @@
   "description": "Logger for Mineral framework",
   "main": "dist/index.js",
   "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "build": "tsc",
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
@@ -48,6 +49,7 @@
     "jest-stare": "^1.26.0",
     "ts-jest": "^24.3.0",
     "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
     "typescript": "^3.7.4"
   }
 }

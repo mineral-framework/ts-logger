@@ -1,9 +1,10 @@
 import * as WinstonTransport from 'winston-transport'
 
 import { Transport } from './transport'
-import { createGraylogTransport } from './graylog'
+
 import { createConsoleTransport } from './console'
 import { createFileTransport } from './file'
+import { createGraylogTransport } from './graylog'
 
 export const createTransport = (transport: Transport, clazz: string): WinstonTransport => {
     switch (transport.type) {

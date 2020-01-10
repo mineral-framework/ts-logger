@@ -1,43 +1,42 @@
-import { createLogger as createWinston, Logger as Winston, format } from 'winston'
+import { createLogger as createWinston, format, Logger as Winston } from 'winston'
 
-import { LoggerOptions } from './logger-options'
 import { createTransport } from '../transport'
+import { LoggerOptions } from './logger-options'
 
 class LoggerImpl implements Logger {
 
-    private _logger: Winston
+    private logger: Winston
 
     constructor(options: LoggerOptions, clazz: string) {
-        
-        this._logger = createWinston({
-            level: options.level,
-            format: format.json(),
+
+        this.logger = createWinston({
             defaultMeta: {
-                'Class': clazz
-            }
+                Class: clazz,
+            },
+            format: format.json(),
+            level: options.level,
         })
 
         options.transports
-            .forEach((transport) => this._logger.add(createTransport(transport, clazz)))
+            .forEach((transport) => this.logger.add(createTransport(transport, clazz)))
     }
 
-
-    debug(message: string, meta?: Object) {
-        this._logger.debug(message, meta)
+    public debug(message: string, meta: object = {}) {
+        this.logger.debug(message, meta)
     }
 
-    info(message: string, meta?: Object) {
-        this._logger.info(message, meta)
+    public info(message: string, meta: object = {}) {
+        this.logger.info(message, meta)
     }
 
-    warning(message: string, meta?: Object) {
-        this._logger.warning(message, meta)
+    public warning(message: string, meta: object = {}) {
+        this.logger.warning(message, meta)
     }
 
-    error(message: string, error?: Error, meta?: Object) {
-        this._logger.error(message, {
-            error: error,
-            meta: meta
+    public error(message: string, error?: Error, meta: object = {}) {
+        this.logger.error(message, {
+            error,
+            meta,
         })
     }
 
@@ -48,8 +47,8 @@ export const createLogger = (options: LoggerOptions, clazz: string): Logger => {
 }
 
 export interface Logger {
-    debug(message: string, data?: Object): void
-    info(message: string, data?: Object): void
-    warning(message: string, data?: Object): void
-    error(message: string | Error, data?: Object): void
+    debug(message: string, data?: object): void
+    info(message: string, data?: object): void
+    warning(message: string, data?: object): void
+    error(message: string | Error, data?: object): void
 }

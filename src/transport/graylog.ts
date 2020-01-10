@@ -17,13 +17,13 @@ export interface GraylogTransport extends TransportOptions {
 export const createGraylogTransport = (transport: GraylogTransport, clazz: string): Graylog2Transport => {
     return new Graylog2Transport({
         graylog: {
-            servers: transport.servers,
+            facility: transport.facility || process.env.NODE_FACILITY || process.env.NODE_ENV || 'Nodejs',
             hostname: transport.hostname,
-            facility: transport.facility || process.env.NODE_FACILITY || process.env.NODE_ENV || 'Nodejs'
+            servers: transport.servers,
         },
+        level: transport.level,
         staticMeta: {
-            'Class': clazz       
+            Class: clazz,
         },
-        level: transport.level
     })
 }

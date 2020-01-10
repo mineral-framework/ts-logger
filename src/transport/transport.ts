@@ -1,5 +1,5 @@
 import { ConsoleTransport } from './console'
-import { GraylogTransport } from './graylog'
 import { FileTransport } from './file'
+import { GraylogTransport } from './graylog'
 
-export type Transport = GraylogTransport | ConsoleTransport | FileTransport
+export type Transport = ConsoleTransport | FileTransport | GraylogTransport
