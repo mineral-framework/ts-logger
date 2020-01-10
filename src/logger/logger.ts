@@ -34,19 +34,11 @@ class LoggerImpl implements Logger {
         this._logger.warning(message, meta)
     }
 
-    error(message: string | Error, meta?: Object) {
-        let data = {
-            ...meta
-        }
-
-        if (message instanceof Error) {
-            data = {
-                ...meta,
-                ...message
-            }
-        }
-
-        this._logger.error(message instanceof Error ? message.message : message, data)
+    error(message: string, error?: Error, meta?: Object) {
+        this._logger.error(message, {
+            error: error,
+            meta: meta
+        })
     }
 
 }

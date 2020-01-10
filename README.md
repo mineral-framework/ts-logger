@@ -2,7 +2,8 @@
 
 A logger for the Mineral Framework
 
-[![Build Status](https://travis-ci.org/mineral-framework/ts-logger.svg?branch=master)](https://travis-ci.org/mineral-framework/ts-logger) ![GitHub package.json version](https://img.shields.io/github/package-json/v/mineral-framework/ts-logger?logo=npm)
+[![Build Status](https://travis-ci.org/mineral-framework/ts-logger.svg?branch=master)](https://travis-ci.org/mineral-framework/ts-logger) [![Coverage Status](https://coveralls.io/repos/github/mineral-framework/ts-logger/badge.svg?branch=master)](https://coveralls.io/github/mineral-framework/ts-logger?branch=master) ![GitHub package.json version](https://img.shields.io/github/package-json/v/mineral-framework/ts-logger?logo=npm)
+
 ## Table of contents
 * [Usage](#usage)
 * [Configuration](#configuration)
