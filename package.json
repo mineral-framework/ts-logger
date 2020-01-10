@@ -1,0 +1,52 @@
+{
+  "name": "@mineral/logger",
+  "version": "1.0.0",
+  "description": "Logger for Mineral framework",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --coverage"
+  },
+  "author": {
+    "name": "Pascal Wilbrink",
+    "email": "pascal.wilbrink@gmail.com",
+    "url": "https://github.com/pascalwilbrink"
+  },
+  "contributors": [
+    {
+      "name": "Pascal Wilbrink",
+      "email": "pascal.wilbrink@gmail.com",
+      "url": "https://github.com/pascalwilbrink"
+    }
+  ],
+  "keywords": [
+    "Mineral",
+    "Logger"
+  ],
+  "bugs": {
+    "url": "https://github.com/mineral-framework/logger"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mineral-framework/logger.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "gelf-pro": "^1.3.3",
+    "winston": "^3.2.1",
+    "winston-graylog2": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.25",
+    "@types/jquery": "^3.3.31",
+    "@types/node": "^13.1.6",
+    "@types/winston": "^2.4.4",
+    "coveralls": "^3.0.9",
+    "jest": "^24.9.0",
+    "jest-html-reporters": "^1.2.1",
+    "jest-stare": "^1.26.0",
+    "ts-jest": "^24.3.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  }
+}

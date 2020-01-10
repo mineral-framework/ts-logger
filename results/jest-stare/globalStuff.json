@@ -1,0 +1,68 @@
+{
+  "bail": 0,
+  "changedFilesWithAncestor": false,
+  "collectCoverage": true,
+  "collectCoverageFrom": null,
+  "coverageDirectory": "/home/pascal/local/logger/coverage",
+  "coverageReporters": [
+    "html",
+    "lcov",
+    "json-summary"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 10,
+      "functions": 10,
+      "lines": 50,
+      "statements": 50
+    }
+  },
+  "detectLeaks": false,
+  "detectOpenHandles": false,
+  "errorOnDeprecated": false,
+  "expand": false,
+  "filter": null,
+  "globalSetup": null,
+  "globalTeardown": null,
+  "json": false,
+  "listTests": false,
+  "maxConcurrency": 5,
+  "maxWorkers": 3,
+  "noStackTrace": false,
+  "nonFlagArgs": [],
+  "notify": false,
+  "notifyMode": "failure-change",
+  "passWithNoTests": false,
+  "projects": null,
+  "reporters": [
+    [
+      "default",
+      {}
+    ],
+    [
+      "/home/pascal/local/logger/node_modules/jest-stare/lib/index.js",
+      {
+        "resultDir": "results/jest-stare/",
+        "reportTitle": "jest-stare!",
+        "additionalResultsProcessors": [],
+        "coverageLink": "../../coverage/lcov-report/index.html",
+        "jestStareConfigJson": "jest-stare.json",
+        "jestGlobalConfigJson": "globalStuff.json",
+        "resultHtml": "index.html",
+        "resultJson": "jest-results.json"
+      }
+    ]
+  ],
+  "rootDir": "/home/pascal/local/logger",
+  "runTestsByPath": false,
+  "skipFilter": false,
+  "testFailureExitCode": 1,
+  "testPathPattern": "",
+  "testResultsProcessor": null,
+  "testSequencer": "/home/pascal/local/logger/node_modules/@jest/test-sequencer/build/index.js",
+  "updateSnapshot": "new",
+  "useStderr": false,
+  "verbose": true,
+  "watch": false,
+  "watchman": true
+}
