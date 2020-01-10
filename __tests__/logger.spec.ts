@@ -37,25 +37,28 @@ describe('createLogger', () => {
     it('Should call debug on winston', () => {
         const message = 'DEBUG'
         logger.debug(message)
-        expect(mockLogger.debug).toHaveBeenCalledWith(message, undefined)
+        expect(mockLogger.debug).toHaveBeenCalledWith(message, {})
     })
 
     it('Should call info on winston', () => {
         const message = 'INFO'
         logger.info(message)
-        expect(mockLogger.info).toHaveBeenCalledWith(message, undefined)
+        expect(mockLogger.info).toHaveBeenCalledWith(message, {})
     })
 
     it('Should call warning on winston', () => {
         const message = 'WARNING'
         logger.warning(message)
-        expect(mockLogger.warning).toHaveBeenCalledWith(message, undefined)
+        expect(mockLogger.warning).toHaveBeenCalledWith(message, {})
     })
 
     it('Should call error on winston', () => {
         const message = 'ERROR'
         logger.error(message)
-        expect(mockLogger.error).toHaveBeenCalledWith(message, {})
+        expect(mockLogger.error).toHaveBeenCalledWith(message, {
+            error: undefined,
+            meta: {}
+        })
     })
 
     it('Should call error on winston with Error', () => {
@@ -67,7 +70,7 @@ describe('createLogger', () => {
         logger.error(err.message, err)
         expect(mockLogger.error).toHaveBeenCalledWith(err.message, {
             error: err,
-            meta: undefined
+            meta: {}
         })
     })
 })
