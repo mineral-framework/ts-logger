@@ -47,7 +47,7 @@ Possible configuration:
 * Graylog
 
 
-### Console {#console-transport}
+### Console
 Console transport
 
 Possible configuration:
@@ -57,7 +57,7 @@ Possible configuration:
 | `type`       | 'console'      |
 | `level`      | Log level. Possible values: 'debug', 'info', 'warning', 'error' |
 
-### Graylog {#graylog-transport}
+### Graylog
 Graylog transport
 
 Possible configuration:
@@ -71,7 +71,7 @@ Possible configuration:
 | `servers[].host` | Host of the graylog server |
 | `servers[].port` | Port of the graylog server |
 
-### File {#file-transport}
+### File
 File transport
 
 | Name         | Description    |
