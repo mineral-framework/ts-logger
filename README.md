@@ -8,9 +8,9 @@ A logger for the Mineral Framework
 * [Usage](#usage)
 * [Configuration](#configuration)
 * [Transports](#transports)
-  * [Console](#console-transport)
-  * [Graylog](#graylog-transport)
-  * [File](#file-transport)
+  * [Console](#console)
+  * [Graylog](#graylog)
+  * [File](#file)
 
 
 ## Usage
